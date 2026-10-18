@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" preserveAspectRatio="xMidYMid slice">
+  <!-- Soft paint splotches echoing the logo: apricot, rose and mauve on warm gray -->
+  <defs>
+    <filter id="paint" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="3" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="70"/>
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+  <g filter="url(#paint)">
+    <ellipse cx="180" cy="160" rx="170" ry="110" fill="#E8A57C" opacity=".55" transform="rotate(-18 180 160)"/>
+    <ellipse cx="300" cy="230" rx="120" ry="80" fill="#D98A93" opacity=".5"/>
+    <ellipse cx="1000" cy="220" rx="190" ry="120" fill="#B89AC4" opacity=".55" transform="rotate(12 1000 220)"/>
+    <ellipse cx="880" cy="320" rx="110" ry="70" fill="#E8A57C" opacity=".45"/>
+    <ellipse cx="620" cy="560" rx="150" ry="95" fill="#D98A93" opacity=".4" transform="rotate(-8 620 560)"/>
+    <ellipse cx="120" cy="700" rx="170" ry="120" fill="#B89AC4" opacity=".5"/>
+    <ellipse cx="240" cy="780" rx="100" ry="70" fill="#E3B26E" opacity=".45"/>
+    <ellipse cx="1080" cy="760" rx="160" ry="110" fill="#D98A93" opacity=".5" transform="rotate(20 1080 760)"/>
+    <ellipse cx="980" cy="850" rx="100" ry="65" fill="#B89AC4" opacity=".45"/>
+    <ellipse cx="520" cy="1080" rx="200" ry="110" fill="#E8A57C" opacity=".5" transform="rotate(-10 520 1080)"/>
+    <ellipse cx="700" cy="1040" rx="110" ry="70" fill="#B89AC4" opacity=".45"/>
+  </g>
+</svg>
