@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Caregiver Voices | Caregiver Chronicles</title>
+<meta name="description" content="Anonymous answers from caregivers of loved ones with neurological conditions: advice, stress, and what they wish others understood.">
+<meta property="og:title" content="Caregiver Voices | Caregiver Chronicles">
+<meta property="og:description" content="Anonymous answers from caregivers of loved ones with neurological conditions: advice, stress, and what they wish others understood.">
+<meta property="og:image" content="logo.jpg">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="banner" id="novBanner" hidden>
+  <div class="banner-inner">
+    <strong>November is National Family Caregivers Month</strong>
+    <span>This month, take a moment to thank a caregiver in your life, or <a href="share.html">share your own story</a>.</span>
+  </div>
+</div>
+<div class="wrap">
+  <div class="topbar">
+    <a class="home" href="index.html"><img src="logo.jpg" alt="Caregiver Chronicles logo" width="52" height="52"><span>Caregiver Chronicles</span></a>
+    <nav aria-label="Pages">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="share.html">Share your story</a>
+      <a href="voices.html" aria-current="page">Caregiver voices</a>
+    </nav>
+  </div>
+  <section>
+    <span class="eyebrow">Caregiver voices</span>
+    <h1 class="page-title">In their own words</h1>
+    <p class="note">Anonymous answers from caregivers, lightly edited for spelling.</p>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div id="panel" role="tabpanel" style="display:flex;flex-direction:column;gap:16px"></div>
+  </section>
+  <div class="support">
+    <p><strong>If caregiving feels like too much right now, you don't have to carry it alone.</strong></p>
+    <p>Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline, US) any time. The Family Caregiver Alliance at <a href="https://www.caregiver.org" target="_blank" rel="noopener">caregiver.org</a> also has resources and support groups.</p>
+  </div>
+  <footer>© 2026 Caregiver Chronicles · Created by Medha Kannan · <a href="https://www.tiktok.com/@caregiver.chronicles" target="_blank" rel="noopener">@caregiver.chronicles on TikTok</a></footer>
+</div>
+<script>
+if (new Date().getMonth() === 10 || location.hash === "#preview-banner") document.getElementById("novBanner").hidden = false;
+</script>
+<script>
+const DATA = [
+ {id:"advice", label:"Advice", q:"What advice would you give to others who have started caregiving for a loved one with a neurological disorder?", items:[
+  "Have patience","Patience","Get Power of Attorney + HIPAA forms while your loved one can still write their name.","Be calm, be patient",
+  "Remember you need to care about yourself too. Get or ask for help when needed.",
+  "Patience. Look at why they are behaving a certain way and develop appropriate communication. Increase the really good times. Try and accept they aren't going to improve. Know they are probably fearful of the future.",
+  "Patience","Patience, commitment, perseverance, faith",
+  "Pray for a quick end, but until then try to remember they don't remember. Try to keep yourself healthy. Patience can be very trying, and try to control your anxiety.",
+  "Patience","Research and lots of reading. Physical, occupational, and speech therapy are important.",
+  "Ask for help. I have a problem doing that, but as he progresses, I know I need help.",
+  "Patience","Have the patient ask God for help?",
+  "Research, read about diseases, go to a support group. Take care of yourself. Medicare offers respite care. If they're a veteran, enroll in the VA for ADL support.",
+  "Patience. Stay informed about the condition as much as possible. Know the changes are not your loved one.",
+  "It feels like it never ends. Things always get worse.",
+  "Ask for help if you can, especially if there is more than one sibling. Keep in touch with their neighbors for emergencies. If their phone is off the hook, a neighbor can stop by and check for you.",
+  "Talk to a therapist or a support group","Have strength mentally","Ask for as much family help as possible"]},
+ {id:"journey", label:"In one word", q:"If you could describe your caregiving journey in one word or phrase, what would it be?", items:[
+  "Blessed","Hope. It is my greatest hope and prayer to have him live and be cared for as we would. It's extremely tiring but rewarding to value life.",
+  "Caregiving is a constant worrying","Be patient!","Responsible, just like mom raised us","Not too bad","Scary","A challenge","Some stress","Exhausting",
+  "Frustrating at times, learning how to cope with his difficulty grasping instructions.","Hard","Challenging","Exhausting","Tiresome","Exhausting",
+  "Always aware of her needs","Exhausting","Progressively worse","Very hard","Overwhelming","Challenging","Hurtful",
+  "A lot of driving to doctors' appointments, making sure they have meals for the week, making sure medications are always taken","Stressful","Stressful","LOVE"]},
+ {id:"self", label:"How I see myself", q:"In what ways has caregiving changed how you view yourself?", items:[
+  "I feel my life is short and it's too late to go enjoy some travel, reading, etc.","Significantly more patient, more understanding and caring",
+  "Many days I don't know if I'll make it through. Couldn't do it for a living.","To make the most of each day and to take 1 day at a time",
+  "I am not the same person anymore. I am resentful. Always tired. I can be a bully. Always thinking of a way out of this nightmare. I do not look pretty anymore. I'm old.",
+  "Cannot be gone for a long time from home","I feel overwhelmed at times because I'm trying to juggle so many things.",
+  "I always thought I was a patient person. Now I pray for more patience.","I feel more confident and prepared, but I feel less like myself, my own person.",
+  "A better person","I had done prior caregiving for my grandmother since age 19, so it comes naturally to me.","A little more stress",
+  "I am the one in charge. I take care of absolutely everything. I feel everything is on my shoulders.","I realize I'm not as patient as I should be.",
+  "Good, about the same","I feel at times that I'm not doing enough","More caring","I have much more responsibility and no \"me\" time","As a provider, not a wife",
+  "I value time and life more","Some days I feel inadequate!",
+  "I lost my spark while taking care of my husband. Now I really have to take care of me to take care of him. Like on an airplane going down, you have to put the mask on yourself to help others.",
+  "I try not to get depressed but it's hard. I don't have the freedom I used to.","The need for much more patience",
+  "My life is no longer mine. I get depressed, a lot of stress. Never have time for myself.",
+  "I have had to change how I interact with my mom. I realized I don't have as much patience as I thought.","I have to put his needs first",
+  "It tests my patience and how I feel about life itself","Just speaking for myself: I always wanted to be a mother, but I can't turn off the mothering towards my parent.",
+  "I had to learn how to be patient. I had to learn how to cook.","Lost","No time for me"]},
+ {id:"understood", label:"What others miss", q:"What do you wish others understood about the realities of caregiving?", items:[
+  "That you do your best and sometimes they don't appreciate it","Since her cancer surgeries, treatment, and radiation, I've been her nurse and energizer.",
+  "How it affects me","Most difficult time of my life.","How hard it is. How time consuming it is. How there's no me time.","It's hard",
+  "How confining it is for the caregiver.","I'm trying to keep things running smoothly, but it's hard because now I'm handling things my husband used to take care of.",
+  "My children are very understanding. Some (not my kids) are pushing me to get a caregiver for him. I know I can handle him.",
+  "How stressful and demanding it can be for both people","Compassion",
+  "I believe they don't realize how important that select time off is to me, and that I need to make it productive as well as positive.","Time consuming",
+  "The time involved. Can't just do what you want, can't just go where you want. Have to bring him almost everywhere with you.",
+  "I think it's different depending on the needs of the patient. People don't usually see behind the scenes.","Have patience. Patience.",
+  "That it is not easy at times, and the insurance company could give more benefits","A lot involved",
+  "I don't think anyone really understands until they are going through it. Others view you as they see you, and if you appear to be coping, they feel you are fine.",
+  "How confining and tiring it is","That it is time consuming and hard because they need a lot of time","Patience",
+  "The loss of the person you once knew. The obstacles in everyday life. It's a 24-hour job. You have to learn how to navigate everything, even things you've never done. You're all alone learning. Life changes in a matter of minutes. Always appreciate what you have.",
+  "Understanding his mood swings","How much it takes to be a caregiver.","How hard it is.","It's very difficult, emotionally stressful. I worry 24 hours a day if she's okay.",
+  "That I cannot leave if I don't make arrangements","That she's not a child. She's reverting and not getting better.",
+  "It's not easy to hand off the patient to another family member for caregiver respite. (It's like having someone watch an infant.)",
+  "They should understand that I have sacrificed some dreams and goals in life to caregiving.","Time required. Frustration. Physicality.","It takes time and patience"]},
+ {id:"stress", label:"Greatest stress", q:"What aspects of caregiving have caused you the greatest amount of stress?", items:[
+  "Keeping track of meds.","Really none at this time.","Memory","Explaining something. Slow to move.",
+  "That I am not giving the proper care or saying the best response to my husband."]}
+];
+
+function group(items){
+  const m = new Map();
+  for (const t of items){ const k=t.trim().toLowerCase().replace(/[.!]+$/,""); if(m.has(k)) m.get(k).n++; else m.set(k,{t,n:1}); }
+  return [...m.values()];
+}
+const tabs=document.getElementById("tabs"), panel=document.getElementById("panel");
+function el(tag,cls,text){const e=document.createElement(tag); if(cls)e.className=cls; if(text!=null)e.textContent=text; return e;}
+function show(id){
+  for (const b of tabs.children) b.setAttribute("aria-selected", b.dataset.id===id ? "true":"false");
+  const d=DATA.find(x=>x.id===id); panel.replaceChildren();
+  panel.append(el("p","panel-q",d.q), el("p","count",d.items.length+" responses"));
+  const g=group(d.items);
+  if (id==="journey"){
+    const short=g.filter(x=>x.t.split(" ").length<=4).sort((a,b)=>b.n-a.n), long=g.filter(x=>x.t.split(" ").length>4);
+    const w=el("div","words");
+    for(const x of short){const s=el("span","word",x.t); s.style.fontSize=(1+Math.min(x.n-1,3)*.28)+"rem"; if(x.n>1){const sp=el("sup",null,"×"+x.n); s.append(sp);} w.append(s);}
+    panel.append(w, el("p","subhead","In a few more words"));
+    const wall=el("div","wall"); for(const x of long) wall.append(el("blockquote","quote",x.t)); panel.append(wall);
+    return;
+  }
+  const wall=el("div","wall");
+  for(const x of g){const b=el("blockquote","quote",x.t); if(x.n>1) b.append(el("span","times","Said by "+x.n+" caregivers")); wall.append(b);}
+  panel.append(wall);
+}
+for(const d of DATA){const b=el("button",null,d.label); b.type="button"; b.role="tab"; b.dataset.id=d.id; b.onclick=()=>show(d.id); tabs.append(b);}
+show("advice");
+</script>
+</body>
+</html>

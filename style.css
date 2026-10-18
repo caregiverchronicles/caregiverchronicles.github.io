@@ -1,0 +1,84 @@
+body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* Layout: one calm reading column; a "voices" wall of real caregiver answers is the heart of the page */
+:root{
+  --bg:#FDEADB; --surface:#FFF8F2; --ink:#3A2A2C; --muted:#7A6264; --line:#F2D3BE;
+  --teal:#B0525D; --teal-soft:#F5E2DF; --marigold:#B5781C; --marigold-soft:#F6E8D0;
+  color-scheme:light;
+  --display:"Newsreader", Georgia, "Times New Roman", serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);padding-inline:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:28px 64px;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);font-weight:500;text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+a{color:var(--teal)}
+:focus-visible{outline:2px solid var(--marigold);outline-offset:3px;border-radius:4px}
+
+header{display:flex;flex-direction:column;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.logo{flex:none;width:96px;height:96px;border-radius:18px;object-fit:cover;box-shadow:0 2px 10px rgb(0 0 0 / .12)}
+.brand{gap:16px}
+h1{font-size:clamp(2.4rem,8vw,3.6rem);letter-spacing:-.01em}
+h1 em{color:var(--teal);font-style:italic}
+.lede{font-size:1.12rem;color:var(--muted);max-width:60ch}
+nav{display:flex;flex-wrap:wrap;gap:8px}
+nav a{text-decoration:none;font-size:.9rem;font-weight:500;padding:7px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink);background:var(--surface)}
+nav a:hover{border-color:var(--teal)}
+
+section{display:flex;flex-direction:column;gap:18px;scroll-margin-top:16px}
+.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--marigold)}
+h2{font-size:clamp(1.7rem,5vw,2.2rem)}
+.prose{display:flex;flex-direction:column;gap:14px;max-width:62ch}
+
+.tiktok{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:11px 18px;border-radius:999px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:600}
+.tiktok[aria-disabled="true"]{opacity:.55;pointer-events:none}
+
+.share{background:var(--teal-soft);border-radius:18px;padding:24px 20px;display:flex;flex-direction:column;gap:18px}
+.share ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.share li{display:flex;gap:10px;align-items:flex-start}
+.share li::before{content:"";flex:none;width:7px;height:7px;margin-top:.62em;border-radius:50%;background:var(--teal)}
+.note{font-size:.9rem;color:var(--muted)}
+.btn{display:inline-flex;align-self:flex-start;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;background:var(--teal);color:var(--bg);font-weight:600;text-decoration:none}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
+
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.tabs button{flex:none;font:500 .9rem var(--body);padding:9px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.panel-q{font-family:var(--display);font-style:italic;font-size:1.3rem;color:var(--teal)}
+.count{font-size:.85rem;color:var(--muted)}
+
+.wall{columns:2 260px;column-gap:14px}
+.quote{break-inside:avoid;margin:0 0 14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-family:var(--display);font-size:1.06rem;line-height:1.45;display:flex;flex-direction:column;gap:6px}
+.quote .times{font-family:var(--body);font-size:.75rem;font-weight:600;color:var(--marigold);background:var(--marigold-soft);align-self:flex-start;padding:2px 8px;border-radius:999px}
+
+.words{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.word{font-family:var(--display);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 14px;line-height:1.4}
+.word sup{font-family:var(--body);font-size:.7rem;font-weight:600;color:var(--marigold);margin-left:3px}
+.subhead{font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+.support{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-direction:column;gap:8px;font-size:.92rem;color:var(--muted)}
+.support strong{color:var(--ink)}
+footer{font-size:.82rem;color:var(--muted)}
+.banner{background:#5E3F8C;color:#FFFFFF;margin-inline:-16px;padding:14px 16px}
+.banner-inner{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:4px}
+.banner strong{font-family:var(--display);font-size:1.15rem;font-weight:500}
+.banner a{color:#FFFFFF;font-weight:600}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+/* Multi-page additions */
+.topbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+.topbar .home{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--teal);font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+.topbar .home img{width:52px;height:52px;border-radius:12px;object-fit:cover}
+nav a[aria-current="page"]{background:var(--teal);color:var(--surface);border-color:var(--teal)}
+.hero{display:flex;flex-direction:column;gap:18px}
+.hero-logo{width:150px;height:150px;border-radius:24px;object-fit:cover;box-shadow:0 4px 18px rgb(0 0 0 / .12)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.card{display:flex;flex-direction:column;gap:8px;padding:18px;border-radius:16px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--teal)}
+.card h3{font-size:1.3rem;color:var(--teal)}
+.card p{font-size:.95rem;color:var(--muted)}
+.card .go{font-weight:600;font-size:.9rem;color:var(--teal);margin-top:auto}
+.page-title{font-size:clamp(2rem,6vw,2.8rem)}
