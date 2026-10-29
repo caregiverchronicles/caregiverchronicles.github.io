@@ -50,12 +50,16 @@ h2{font-size:clamp(1.7rem,5vw,2.2rem)}
 .panel-q{font-family:var(--display);font-style:italic;font-size:1.3rem;color:var(--teal)}
 .count{font-size:.85rem;color:var(--muted)}
 
-.wall{columns:2 260px;column-gap:14px}
-.quote{break-inside:avoid;margin:0 0 14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-family:var(--display);font-size:1.06rem;line-height:1.45;display:flex;flex-direction:column;gap:6px}
+.wall{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:34px 26px;padding:18px 0 14px;width:min(1040px,100vw - 32px);margin-inline:50%;translate:-50% 0}
+/* Answers float like notes suspended over the paint: each gets its own tint, tilt and drift from voices.html */
+.quote{--tint:var(--surface);--r:0deg;--y:0px;margin:0;flex:0 1 auto;max-width:min(100%,270px);background:color-mix(in srgb,var(--tint) 55%,var(--surface));border:1px solid rgb(255 255 255 / .7);border-radius:20px;padding:14px 18px;font-family:var(--display);font-size:1.02rem;line-height:1.45;display:flex;flex-direction:column;gap:6px;box-shadow:0 8px 22px rgb(70 45 50 / .09);transform:translate(var(--x,0px),var(--y)) rotate(var(--r));animation:drift var(--d,7s) ease-in-out var(--delay,0s) infinite alternate}
+.quote.short{font-size:1.35rem;padding:10px 20px;text-align:center;align-items:center}
+.quote.short .times{align-self:center}
+@keyframes drift{from{translate:0 0}to{translate:0 -10px}}
 .quote .times{font-family:var(--body);font-size:.75rem;font-weight:600;color:var(--marigold);background:var(--marigold-soft);align-self:flex-start;padding:2px 8px;border-radius:999px}
 
-.words{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
-.word{font-family:var(--display);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 14px;line-height:1.4}
+.words{display:flex;flex-wrap:wrap;justify-content:center;gap:40px 22px;align-items:center;padding:18px 0}
+.word{font-family:var(--display);background:color-mix(in srgb,var(--tint,var(--surface)) 55%,var(--surface));border:1px solid rgb(255 255 255 / .7);border-radius:999px;padding:4px 14px;line-height:1.4;box-shadow:0 6px 16px rgb(70 45 50 / .08);transform:translateY(var(--y,0)) rotate(var(--r,0deg));animation:drift var(--d,7s) ease-in-out var(--delay,0s) infinite alternate}
 .word sup{font-family:var(--body);font-size:.7rem;font-weight:600;color:var(--marigold);margin-left:3px}
 .subhead{font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 
@@ -66,7 +70,7 @@ footer{font-size:.82rem;color:var(--muted)}
 .banner-inner{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:4px}
 .banner strong{font-family:var(--display);font-size:1.15rem;font-weight:500}
 .banner a{color:#FFFFFF;font-weight:600}
-@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}.quote,.word{animation:none}}
 html{scroll-behavior:smooth}
 body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:url("background.svg") center/cover no-repeat}
 
