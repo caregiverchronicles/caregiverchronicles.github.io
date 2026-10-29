@@ -24,8 +24,8 @@ header{display:flex;flex-direction:column;gap:18px}
 h1{font-size:clamp(2.4rem,8vw,3.6rem);letter-spacing:-.01em}
 h1 em{color:var(--teal);font-style:italic}
 .lede{font-size:1.12rem;color:var(--muted);max-width:60ch}
-nav{display:flex;flex-wrap:wrap;gap:8px}
-nav a{text-decoration:none;font-size:.9rem;font-weight:500;padding:7px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink);background:var(--surface)}
+nav{display:flex;flex-wrap:wrap;gap:6px}
+nav a{text-decoration:none;font-size:.9rem;font-weight:500;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);background:var(--surface)}
 nav a:hover{border-color:var(--teal)}
 
 section{display:flex;flex-direction:column;gap:18px;scroll-margin-top:16px}
@@ -77,7 +77,7 @@ html{scroll-behavior:smooth}
 body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:url("background.svg") center/cover no-repeat}
 
 /* Multi-page additions */
-.topbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+.topbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
 .topbar .home{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--teal);font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
 .topbar .home img{width:52px;height:52px;border-radius:12px;object-fit:cover}
 nav a[aria-current="page"]{background:var(--teal);color:var(--surface);border-color:var(--teal)}
