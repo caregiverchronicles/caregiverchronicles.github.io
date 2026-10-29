@@ -50,17 +50,33 @@
 if (new Date().getMonth() === 10 || location.hash === "#preview-banner") document.getElementById("novBanner").hidden = false;
 </script>
 <script>
-// To feature a post: copy its TikTok link and add the long number at the end of it to this list.
-const POSTS = ["7669915614118513950","7689630932172655903","7694710319951678733","7697859031276244237","7671300522003025183"];
-const posts=document.getElementById("posts");
-for(const id of POSTS){
+// To feature a post: copy its TikTok link and add its type (video or photo) and the long number at the end.
+const POSTS = [
+ {type:"video", id:"7669915614118513950"},
+ {type:"photo", id:"7689630932172655903"},
+ {type:"photo", id:"7694710319951678733"},
+ {type:"photo", id:"7697859031276244237"},
+ {type:"photo", id:"7671300522003025183"}
+];
+const posts=document.getElementById("posts"), frames=[];
+for(const p of POSTS){
+  const item=document.createElement("div"); item.className="post-item";
   const box=document.createElement("div"); box.className="post";
   const f=document.createElement("iframe");
-  f.src="https://www.tiktok.com/embed/v2/"+id+"?lang=en-US";
-  f.title="Caregiver Chronicles TikTok post"; f.loading="lazy";
+  f.title="Caregiver Chronicles TikTok post"; f.dataset.src="https://www.tiktok.com/embed/v2/"+p.id+"?lang=en-US";
   f.allow="encrypted-media; fullscreen"; f.allowFullscreen=true;
-  box.append(f); posts.append(box);
+  const a=document.createElement("a"); a.className="post-link"; a.target="_blank"; a.rel="noopener";
+  a.href="https://www.tiktok.com/@caregiver.chronicles/"+p.type+"/"+p.id; a.textContent="Open on TikTok →";
+  box.append(f); item.append(box,a); posts.append(item); frames.push(f);
 }
+// TikTok rate-limits a page that loads several players at once, so load them one after another
+function loadNext(i){
+  if(i>=frames.length) return;
+  const f=frames[i], next=()=>setTimeout(()=>loadNext(i+1),1500);
+  f.addEventListener("load",next,{once:true});
+  f.src=f.dataset.src;
+}
+loadNext(0);
 </script>
 </body>
 </html>
