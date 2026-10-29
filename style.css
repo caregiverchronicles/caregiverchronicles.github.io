@@ -52,14 +52,14 @@ h2{font-size:clamp(1.7rem,5vw,2.2rem)}
 
 .wall{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:34px 26px;padding:18px 0 14px;width:min(1040px,100vw - 32px);margin-inline:50%;translate:-50% 0}
 /* Answers float like notes suspended over the paint: each gets its own tint, tilt and drift from voices.html */
-.quote{--tint:var(--surface);--r:0deg;--y:0px;margin:0;flex:0 1 auto;max-width:min(100%,270px);background:color-mix(in srgb,var(--tint) 55%,var(--surface));border:1px solid rgb(255 255 255 / .7);border-radius:20px;padding:14px 18px;font-family:var(--display);font-size:1.02rem;line-height:1.45;display:flex;flex-direction:column;gap:6px;box-shadow:0 8px 22px rgb(70 45 50 / .09);transform:translate(var(--x,0px),var(--y)) rotate(var(--r));animation:drift var(--d,7s) ease-in-out var(--delay,0s) infinite alternate}
+.quote{--tint:var(--surface);--r:0deg;--y:0px;margin:0;flex:0 1 auto;max-width:min(100%,270px);background:color-mix(in srgb,var(--tint) 55%,var(--surface));border:1px solid rgb(255 255 255 / .7);border-radius:20px;padding:14px 18px;font-family:var(--display);font-size:1.02rem;line-height:1.45;display:flex;flex-direction:column;gap:6px;box-shadow:0 8px 22px rgb(70 45 50 / .09);transform:translate(var(--x,0px),var(--y)) rotate(var(--r));animation:drift var(--d,7s) ease-in-out var(--delay,0s) infinite}
 .quote.short{font-size:1.35rem;padding:10px 20px;text-align:center;align-items:center}
 .quote.short .times{align-self:center}
-@keyframes drift{from{translate:0 0}to{translate:0 -10px}}
+@keyframes drift{0%{translate:0 0;rotate:0deg}25%{translate:6px -12px;rotate:.8deg}50%{translate:0 -20px;rotate:0deg}75%{translate:-6px -9px;rotate:-.8deg}100%{translate:0 0;rotate:0deg}}
 .quote .times{font-family:var(--body);font-size:.75rem;font-weight:600;color:var(--marigold);background:var(--marigold-soft);align-self:flex-start;padding:2px 8px;border-radius:999px}
 
 .words{display:flex;flex-wrap:wrap;justify-content:center;gap:40px 22px;align-items:center;padding:18px 0}
-.word{font-family:var(--display);background:color-mix(in srgb,var(--tint,var(--surface)) 55%,var(--surface));border:1px solid rgb(255 255 255 / .7);border-radius:999px;padding:4px 14px;line-height:1.4;box-shadow:0 6px 16px rgb(70 45 50 / .08);transform:translateY(var(--y,0)) rotate(var(--r,0deg));animation:drift var(--d,7s) ease-in-out var(--delay,0s) infinite alternate}
+.word{font-family:var(--display);background:color-mix(in srgb,var(--tint,var(--surface)) 55%,var(--surface));border:1px solid rgb(255 255 255 / .7);border-radius:999px;padding:4px 14px;line-height:1.4;box-shadow:0 6px 16px rgb(70 45 50 / .08);transform:translateY(var(--y,0)) rotate(var(--r,0deg));animation:drift var(--d,7s) ease-in-out var(--delay,0s) infinite}
 .word sup{font-family:var(--body);font-size:.7rem;font-weight:600;color:var(--marigold);margin-left:3px}
 .subhead{font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 
