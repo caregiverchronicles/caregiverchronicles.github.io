@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Watch | Caregiver Chronicles</title>
+<meta name="description" content="Affirmations, real words from caregivers, videos, and daily tips from Caregiver Chronicles on TikTok.">
+<meta property="og:title" content="Watch | Caregiver Chronicles">
+<meta property="og:description" content="Affirmations, real words from caregivers, videos, and daily tips from Caregiver Chronicles on TikTok.">
+<meta property="og:image" content="logo.jpg">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600&family=Lora:wght@600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="banner" id="novBanner" hidden>
+  <div class="banner-inner">
+    <strong>November is National Family Caregivers Month</strong>
+    <span>This month, take a moment to thank a caregiver in your life, or <a href="share.html">share your own story</a>.</span>
+  </div>
+</div>
+<div class="wrap">
+  <div class="topbar">
+    <a class="home" href="index.html"><img src="logo.jpg" alt="Caregiver Chronicles logo" width="52" height="52"><span>Caregiver Chronicles</span></a>
+    <nav aria-label="Pages">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="share.html">Share your story</a>
+      <a href="voices.html">Caregiver voices</a>
+      <a href="watch.html" aria-current="page">Watch</a>
+    </nav>
+  </div>
+    <section>
+    <span class="eyebrow">Watch</span>
+    <h1 class="page-title">From our TikTok</h1>
+    <p class="watch-text">Here are some of the kinds of posts we share: affirmations, real words from caregivers, videos, and daily tips. Follow along on TikTok at <a href="https://www.tiktok.com/@caregiver.chronicles" target="_blank" rel="noopener">@caregiver.chronicles</a>.</p>
+    <div class="posts" id="posts"></div>
+    <p class="watch-text">Want more? Find us on TikTok for everything we've posted.</p>
+    <a class="btn btn-big" href="https://www.tiktok.com/@caregiver.chronicles" target="_blank" rel="noopener">@caregiver.chronicles on TikTok →</a>
+  </section>
+  <div class="support">
+    <p><strong>If caregiving feels like too much right now, you don't have to carry it alone.</strong></p>
+    <p>Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline, US) any time. The Family Caregiver Alliance at <a href="https://www.caregiver.org" target="_blank" rel="noopener">caregiver.org</a> also has resources and support groups.</p>
+  </div>
+  <footer>© 2026 Caregiver Chronicles · Created by Medha Kannan · <a href="https://www.tiktok.com/@caregiver.chronicles" target="_blank" rel="noopener">@caregiver.chronicles on TikTok</a></footer>
+</div>
+<script>
+if (new Date().getMonth() === 10 || location.hash === "#preview-banner") document.getElementById("novBanner").hidden = false;
+</script>
+<script>
+// To feature a post: copy its TikTok link and add the long number at the end of it to this list.
+const POSTS = ["7669915614118513950","7689630932172655903","7694710319951678733","7697859031276244237","7671300522003025183"];
+const posts=document.getElementById("posts");
+for(const id of POSTS){
+  const box=document.createElement("div"); box.className="post";
+  const f=document.createElement("iframe");
+  f.src="https://www.tiktok.com/embed/v2/"+id+"?lang=en-US";
+  f.title="Caregiver Chronicles TikTok post"; f.loading="lazy";
+  f.allow="encrypted-media; fullscreen"; f.allowFullscreen=true;
+  box.append(f); posts.append(box);
+}
+</script>
+</body>
+</html>

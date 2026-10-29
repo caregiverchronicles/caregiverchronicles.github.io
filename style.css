@@ -89,4 +89,12 @@ nav a[aria-current="page"]{background:var(--teal);color:var(--surface);border-co
 .card h3{font-size:1.3rem;color:var(--teal)}
 .card p{font-size:.95rem;color:var(--muted)}
 .card .go{font-weight:600;font-size:.9rem;color:var(--teal);margin-top:auto}
+.posts{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;width:min(1040px,100vw - 32px);margin-inline:50%;translate:-50% 0}
+
+.watch-text{font-size:1.35rem;line-height:1.5;max-width:40ch;color:var(--ink)}
+.watch-text a{font-weight:600}
+.btn-big{font-size:1.15rem;padding:15px 26px}
+/* TikTok's player is a fixed 325x740, so it's shown at 80% to keep the boxes compact */
+.post{width:260px;height:592px;border-radius:16px;overflow:hidden;background:var(--surface);box-shadow:0 8px 22px rgb(70 45 50 / .1)}
+.post iframe{width:325px;height:740px;border:0;transform:scale(.8);transform-origin:0 0}
 .page-title{font-size:clamp(2rem,6vw,2.8rem)}
